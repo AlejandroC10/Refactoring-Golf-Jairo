@@ -44,7 +44,7 @@ namespace Round3.A
                         }
                     }
 
-                    return input;
+                    break;
             }
             return input;
         }
