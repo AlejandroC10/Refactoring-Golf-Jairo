@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace Round4.A
 {
+    public class Title
+    {
+        private static object[] Title(string titleName, string donorMembershipId)
+        {
+            var objects = new Object[] { titleName, donorMembershipId, 1 };
+            return objects;
+        }
+    }
+
     public class Library
     {
 
@@ -18,7 +27,8 @@ namespace Round4.A
 
         public void Donate(String titleName, String donorMembershipId)
         {
-            _titles.Add(titleName, new Object[] { titleName, donorMembershipId, 1 });
+            var objects = A.Title.Title(titleName, donorMembershipId);
+            _titles.Add(titleName, objects);
         }
 
         public List<Object[]> GetTitlesDonatedByMember(String donorMembershipId)
