@@ -18,7 +18,7 @@ namespace Round4.A
 
         public void Donate(String titleName, String donorMembershipId)
         {
-            _titles.Add(titleName, new Object[] { titleName, donorMembershipId, 1 });
+            _titles.Add(titleName, A.Title.Title());
         }
 
         public List<Object[]> GetTitlesDonatedByMember(String donorMembershipId)
